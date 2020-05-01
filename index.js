@@ -27,7 +27,7 @@ async function getData(url) {
 }
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 8080;
 app.get('/',async (req, res) => {
   try {
     const result = await getData(url);
